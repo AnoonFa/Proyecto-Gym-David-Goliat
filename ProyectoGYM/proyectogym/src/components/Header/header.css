@@ -1,9 +1,7 @@
-/* src/components/Header/Header.css */
-
 .Rectangle100 {
     width: 100%;
     background: #FFC120;
-    padding: 0 2%;
+    padding: 1%;
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -15,43 +13,30 @@
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Reduce el espacio para acercar las opciones a la barra de búsqueda */
-}
-
-.Group17 {
-    flex: 1;
-    text-align: center;
-}
-
-.Gimnasio {
-    color: #2041B5;
-    font-size: 3.5vw; /* Ajusta el tamaño con respecto al ancho del viewport */
-    font-family: 'Jomhuria', sans-serif;
-    font-weight: 400;
-    line-height: 1.1;
-    margin: 0;
-    padding: 0;
+    justify-content: center; /* Centra la barra de navegación */
+    margin-bottom: 10px;
 }
 
 .DavidGoliat {
-    color: #FA0000;
-    font-size: 2vw; /* Ajusta el tamaño con respecto al ancho del viewport */
-    font-family: 'Licorice', sans-serif;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin-right: 40px; /* Ajusta la distancia entre el logo y la barra de búsqueda */
+}
+
+.LogoImage {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
 }
 
 .SearchBarWrapper {
     display: flex;
     align-items: center;
-    flex: 2;
-    justify-content: space-between; /* Asegura que los elementos dentro de la barra de búsqueda estén separados */
+    justify-content: space-between;
+    flex: 1;
 }
 
 .SearchBar {
-    width: 70%;
-    max-width: 600px; /* Establece un ancho máximo para la barra de búsqueda */
+    width: 100%;
+    max-width: 1000px; /* Haz la barra de búsqueda más grande */
     height: 57px;
     background: #F7F2FA;
     border-radius: 28px;
@@ -65,17 +50,14 @@
 .StateLayer {
     flex: 1;
     display: flex;
-    align-items: center;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
 .LeadingIcon, .StTrailingIcon {
-    width: 10%;
+    width: 4%;
     height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .Container {
@@ -86,18 +68,12 @@
     align-items: center;
 }
 
-.Icon {
+.IconImage {
     width: 24px;
     height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.IconInner {
-    width: 18px;
-    height: 12px;
-    background: #1D1B20;
 }
 
 .Content {
@@ -107,43 +83,36 @@
     justify-content: flex-start;
 }
 
-.SupportingText {
-    color: #1D1B20;
+.SearchInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    color: #1D1B20;
+    padding-left: 10px;
 }
 
-.TrailingElements {
-    display: flex;
-    justify-content: flex-end;
+.SearchInput:focus {
+    outline: none;
 }
 
-.LogOut {
-    width: 76px;
-    height: 69px;
+.LogOut .IconImage {
+    width: 30px;
+    height: auto;
     padding: 8.62px 9.50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px; /* Espacio entre la barra de búsqueda y el LogOut */
-}
-
-.LogOut .Icon {
-    width: 57px;
-    height: 51.75px;
+    margin-left: 20px;
 }
 
 .Options {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px;
     position: fixed;
-    top: 6.6%; /* Mueve las opciones justo debajo de la barra de búsqueda */
-    left: 35%;
-}
-
-.Clases, .Planes, .Rutina, .Productos {
+    top: 7%;
     color: #1D1B20;
     padding: 10px;
     font-size: 16px;
@@ -153,51 +122,45 @@
 @media (max-width: 1600px) {
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 16px;
-        padding: 2px;
+        margin-top: -4px;
     }
 }
 @media (max-width: 1400px) {
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 15px;
-        padding: 1px;
+        padding: 0px;
     }
 }
-
 @media (max-width: 1200px) {
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 14px;
-        padding: 2px;
+        padding: 0px;
     }
 }
-
 @media (max-width: 992px) {
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 14px;
-        padding: 2px;
+        padding: 0px;
     }
 }
-
 @media (max-width: 768px) {
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 13px;
-        padding: 2px;
+        padding: 0px;
     }
 }
-
 @media (max-width: 576px) {
     .SearchBar {
         width: 100%;
     }
-
     .Options {
-        top: 10%; /* Ajustar si es necesario para que no se salga de la vista */
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-
     .Clases, .Planes, .Rutina, .Productos {
         font-size: 8px;
         padding: 2px;
