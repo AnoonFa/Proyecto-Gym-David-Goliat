@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1000;/* Asegurarse de que esté sobre otros elementos */
 }
 
 .TopSection {
@@ -19,7 +20,8 @@
 
 .DavidGoliat {
     display: flex;
-    margin-right: 40px; /* Ajusta la distancia entre el logo y la barra de búsqueda */
+    
+    margin-right: 70px; /* Ajusta la distancia entre el logo y la barra de búsqueda */
 }
 
 .LogoImage {
@@ -99,7 +101,7 @@
 }
 
 .LogOut .IconImage {
-    width: 30px;
+    width: 40px;
     height: auto;
     padding: 8.62px 9.50px;
     display: flex;
@@ -108,14 +110,17 @@
     margin-left: 20px;
 }
 
+.Options a {
+    text-decoration: none;
+    color: #1D1B20;
+    font-size: 18px;
+}
+
 .Options {
     display: flex;
-    gap: 10px;
-    position: fixed;
-    top: 7%;
-    color: #1D1B20;
-    padding: 10px;
-    font-size: 16px;
+    margin-top: -8px;
+    gap: 40px;
+  
 }
 
 /* Media Queries para responsividad */
