@@ -1,0 +1,87 @@
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px 0 10px 0 ;
+    gap: 25px;
+}
+
+.FirstColumn, .SecondColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Plan {
+    background-color: #ffffff00; /* Color de fondo del contenedor */
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+
+}
+
+.NamePlan1 {
+    background-color: #FFC120; /* Color del nombre del plan */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    font-size: 1.2em;
+}
+
+.PlanDetails1 {
+    background-color: #FFE86F; /* Color de los detalles del plan */
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.NamePlan2 {
+    background-color: #FF0303; /* Color del nombre del plan */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    font-size: 1.2em;
+}
+
+.PlanDetails2 {
+    background-color: #FF4444; /* Color de los detalles del plan */
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+.NamePlan3 {
+    background-color: #2956F6; /* Color del nombre del plan */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    font-size: 1.2em;
+}
+
+.PlanDetails3 {
+    background-color: #0085FF; /* Color de los detalles del plan */
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+
+
+.NamePlan4 {
+    background-color: #F483F6; /* Color del nombre del plan */
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    font-size: 1.2em;
+}
+
+.PlanDetails4 {
+    background-color: #FEBAFF; /* Color de los detalles del plan */
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}

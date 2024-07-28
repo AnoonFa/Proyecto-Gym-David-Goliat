@@ -1,14 +1,15 @@
 import React from 'react';
-import Button from '../../components/Button';
+import Plans from '../../../components/Plans/Plans';
 
 function PlanesCliente() {
   return (
-    <div>
-      <h1>Planes para Clientes</h1>
-      <Button>Click me</Button>
-      {/* Añade el contenido específico de la página aquí */}
+    <div className="ClientPlansContainer">
+       <center>
+        <h2>¡Nuestros Planes! </h2>
+        
+        <Plans  /> 
+        </center>
     </div>
-  );
+);
 }
-
 export default PlanesCliente;
