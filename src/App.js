@@ -1,25 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import MyCalendar from './components/Calendar/Calendar'
-import AdminCalendar from './components/Calendar/AdminCalendar'
-import './App.css';
 
+
+// Importa otras páginas según sea necesario
 
 function App() {
   return (
-    <div className="App">
-      <Header /> 
-      {/* Otros componentes y contenido de la aplicación */}
-
-      <MyCalendar events={[]} />
-      {/* Calendario para clientes*/}
-
-      {/* Para el calendario de administradores */}
-      <AdminCalendar />
+    <Router>
+      <Header />
 
       <Footer />
-    </div>
+    </Router>
   );
 }
 
