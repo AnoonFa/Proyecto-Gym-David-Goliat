@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import Plans from './components/Plans/Plans'
 import PlanesCliente from './pages/Client/PlansPage/PlansClient';
 import PlanesAdmin from './pages/Management/ManagePlans/PlansAdmi';
+import ClientPayments from './pages/Client/PaymentsPage/ClienPayments';
+import AdminPayments from './pages/Management/ManagementPayments/AdminPayments';
 
 function App() {
   return (
@@ -12,10 +14,8 @@ function App() {
       <div>
         <Header />
 
-
         <Routes>
-          <Route path="/Client/PlansPage/PlansClient" element={<PlanesCliente />} />
-          <Route path="/Management/ManagePlans/PlansAdmi" element={<PlanesAdmin />} />
+          
         </Routes>
         <Footer />
       </div>
