@@ -1,0 +1,90 @@
+.VerCliente {
+    background-color: #2196F3;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 32px;
+    width: 92%;
+    position: relative;
+    left: 3%;
+}
+
+.VerCliente h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.VerCliente h3 {
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.VerCliente .ClienteForm {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.VerCliente .ClienteForm {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.VerCliente .ClienteForm button {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.VerCliente .ClienteForm div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.VerCliente .ClienteForm label {
+    margin-bottom: 5px;
+}
+
+.VerCliente .ClienteDatabase {
+    margin-top: 20px;
+}
+
+.VerCliente .ClienteLista {
+    margin-top: 20px;
+}
+
+.VerCliente .ClienteItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #000000;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.VerCliente .ClienteItem input {
+    width: 95%;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.VerCliente .ClienteItem button {
+    height: 38px;
+    margin-right: 10px;
+}
+
+/*.ClienteDatabase .boton {
+    display: block;
+    margin: 500px;  Centrar el botón horizontalmente 
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+*/

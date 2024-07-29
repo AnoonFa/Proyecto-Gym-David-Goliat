@@ -5,6 +5,7 @@
     align-items: flex-start;
     padding: 5px 0 10px 0 ;
     gap: 25px;
+    margin-top: 30px;
 }
 
 .FirstColumn, .SecondColumn {
@@ -22,7 +23,7 @@
 }
 
 .NamePlan1 {
-    background-color: #FFC120; /* Color del nombre del plan */
+    background-color: #f1cc6d; /* Color del nombre del plan */
     color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
@@ -38,7 +39,7 @@
 }
 
 .NamePlan2 {
-    background-color: #FF0303; /* Color del nombre del plan */
+    background-color: #fc1919; /* Color del nombre del plan */
     color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
@@ -47,14 +48,14 @@
 }
 
 .PlanDetails2 {
-    background-color: #FF4444; /* Color de los detalles del plan */
+    background-color: #f35050; /* Color de los detalles del plan */
     padding: 10px;
     border-radius: 0 0 5px 5px;
     text-align: center;
 }
 
 .NamePlan3 {
-    background-color: #2956F6; /* Color del nombre del plan */
+    background-color: #718be9; /* Color del nombre del plan */
     color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
@@ -71,7 +72,7 @@
 
 
 .NamePlan4 {
-    background-color: #F483F6; /* Color del nombre del plan */
+    background-color: #83f68f; /* Color del nombre del plan */
     color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
@@ -80,7 +81,7 @@
 }
 
 .PlanDetails4 {
-    background-color: #FEBAFF; /* Color de los detalles del plan */
+    background-color: #baffc1; /* Color de los detalles del plan */
     padding: 10px;
     border-radius: 0 0 5px 5px;
     text-align: center;

@@ -1,15 +1,19 @@
 import React from 'react';
+import './HeaderAdmin.css';
 import { useNavigate } from 'react-router-dom';
-import './header.css';
 import searchIcon from '../../assets/icons/SearchIcon.png'; // Ajusta esta ruta
 import logo from '../../assets/images/David&GoliatLogo.png';
-// import logoutIcon from '../../assets/icons/LogOut.png'; // Ajusta esta ruta
+import logoutIcon from '../../assets/icons/LogOut.png'; // Ajusta esta ruta
 
-function Header() {
+function HeaderAdmin() {
   const navigate = useNavigate();
 
-  const handleindexClick = () => {
-    navigate('/adminEmpleadoIndex');
+  const handleLogoutClick = () => {
+    navigate('/');
+  };
+
+  const handleClientesClick = () => {
+    navigate('/adminEmpleadoIndex/VerCliente');
   };
 
   return (
@@ -20,7 +24,7 @@ function Header() {
         </div>
 
         <div className="SearchBarWrapper">
-          <div className="SearchBar">    
+          <div className="SearchBar">
             <div className="StateLayer">
               <div className="LeadingIcon">
                 <img src={searchIcon} alt="Buscar" className="IconImage" />
@@ -30,24 +34,21 @@ function Header() {
               </div>
             </div>
           </div>
-          <div className="LoginButton">
-            <button onClick={handleindexClick} className="LoginButtonLink">Iniciar Sesión</button>
-          </div>
-          {/*
-          <div className="LogOut">
+          <div className="LogOut" onClick={handleLogoutClick}>
             <img src={logoutIcon} alt="LogOut" className="IconImage" />
           </div>
-          */}
         </div>
       </div>
       <div className="Options">
-        <a href="" className="Clases">Clases</a>
-        <a href="" className="Planes">Planes</a>
-        <a href="" className="Rutina">Rutina</a>
-        <a href="" className="Productos">Productos</a>
+        <a href="#" className="Clases" onClick={() => navigate('/adminEmpleadoIndex/clases')}>Clases</a>
+        <a href="#" className="Planes" onClick={() => navigate('/adminEmpleadoIndex/planes')}>Planes</a>
+        <a href="#" className="Rutina" onClick={() => navigate('/adminEmpleadoIndex/rutina')}>Rutina</a>
+        <a href="#" className="Clientes" onClick={handleClientesClick}>Clientes</a>
+        <a href="#" className="Ticketera" onClick={() => navigate('/adminEmpleadoIndex/ticketera')}>Ticketera</a>
+        <a href="#" className="Productos" onClick={() => navigate('/adminEmpleadoIndex/productos')}>Productos</a>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default HeaderAdmin;

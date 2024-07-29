@@ -8,19 +8,19 @@ function Plans() {
             <div className="FirstColumn">
                 <div className="Plan">
                     <div className='NamePlan1'>
-                        Plan 1
+                         Mensualidad
                     </div>
                     <div className='PlanDetails1'>
-                        <p>Detalles del Plan 1</p>
+                        <p>Acceso completo por un mes</p>
                         <Button variant="add">Ver</Button>
                     </div>
                 </div>
                 <div className="Plan">
                     <div className='NamePlan2'>
-                        Plan 2
+                        Trimestre
                     </div>
                     <div className='PlanDetails2'>
-                        <p>Detalles del Plan 2</p>
+                        <p>Acceso completo por tres meses</p>
                         <Button variant="add">Ver</Button>
                     </div>
                 </div>
@@ -28,19 +28,19 @@ function Plans() {
             <div className="SecondColumn">
                 <div className="Plan">
                     <div className='NamePlan3'>
-                        Plan 3
+                        Semestre
                     </div>
                     <div className='PlanDetails3'>
-                        <p>Detalles del Plan 3</p>
+                        <p>Acceso completo por seis meses</p>
                         <Button variant="add">Ver</Button>
                     </div>
                 </div>
                 <div className="Plan">
                     <div className='NamePlan4'>
-                        Plan 4
+                        Año
                     </div>
                     <div className='PlanDetails4'>
-                        <p>Detalles del Plan 4</p>
+                        <p>Acceso completo por un año</p>
                         <Button variant="add">Ver</Button>
                     </div>
                 </div>
