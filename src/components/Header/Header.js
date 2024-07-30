@@ -8,8 +8,8 @@ import logo from '../../assets/images/David&GoliatLogo.png';
 function Header() {
   const navigate = useNavigate();
 
-  const handleindexClick = () => {
-    navigate('/adminEmpleadoIndex');
+  const handleLoginClick = () => {
+    navigate('/LoginPage');
   };
 
   return (
@@ -31,7 +31,7 @@ function Header() {
             </div>
           </div>
           <div className="LoginButton">
-            <button onClick={handleindexClick} className="LoginButtonLink">Iniciar Sesión</button>
+            <button onClick={handleLoginClick} className="LoginButtonLink">Iniciar Sesión</button>
           </div>
           {/*
           <div className="LogOut">

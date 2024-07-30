@@ -40,12 +40,12 @@ function HeaderAdmin() {
         </div>
       </div>
       <div className="Options">
-        <a href="#" className="Clases" onClick={() => navigate('/adminEmpleadoIndex/clases')}>Clases</a>
-        <a href="#" className="Planes" onClick={() => navigate('/adminEmpleadoIndex/planes')}>Planes</a>
-        <a href="#" className="Rutina" onClick={() => navigate('/adminEmpleadoIndex/rutina')}>Rutina</a>
-        <a href="#" className="Clientes" onClick={handleClientesClick}>Clientes</a>
-        <a href="#" className="Ticketera" onClick={() => navigate('/adminEmpleadoIndex/ticketera')}>Ticketera</a>
-        <a href="#" className="Productos" onClick={() => navigate('/adminEmpleadoIndex/productos')}>Productos</a>
+        <a href="" className="Clases" onClick={() => navigate('/adminEmpleadoIndex/Clases')}>Clases</a>
+        <a href="" className="Planes" onClick={() => navigate('/adminEmpleadoIndex/Planes')}>Planes</a>
+        <a href="" className="Rutina" onClick={() => navigate('/adminEmpleadoIndex/Rutina')}>Rutina</a>
+        <a href="" className="Clientes" onClick={handleClientesClick}>Clientes</a>
+        <a href="" className="Ticketera" onClick={() => navigate('/adminEmpleadoIndex/Ticketera')}>Ticketera</a>
+        <a href="" className="Productos" onClick={() => navigate('/adminEmpleadoIndex/Productos')}>Productos</a>
       </div>
     </div>
   );
