@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './header.css';
-import searchIcon from '../../assets/icons/SearchIcon.png'; // Ajusta esta ruta
+import searchIcon from '../../assets/icons/SearchIcon.png'; 
 import logo from '../../assets/images/David&GoliatLogo.png';
-// import logoutIcon from '../../assets/icons/LogOut.png'; // Ajusta esta ruta
+import logoutIcon from '../../assets/icons/LogOut.png'; 
 
 function Header() {
   const navigate = useNavigate();
 
-  const handleindexClick = () => {
-    navigate('/adminEmpleadoIndex');
+  const handleLoginClick = () => {
+    navigate('/Login');
   };
 
   return (
@@ -31,7 +31,7 @@ function Header() {
             </div>
           </div>
           <div className="LoginButton">
-            <button onClick={handleindexClick} className="LoginButtonLink">Iniciar Sesión</button>
+            <button onClick={handleLoginClick} className="LoginButtonLink">Iniciar Sesión</button>
           </div>
           {/*
           <div className="LogOut">

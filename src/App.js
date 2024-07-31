@@ -3,19 +3,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Plans from './components/Plans/Plans'
-/*import PlanesCliente from './pages/Client/PlansPage/PlansClient';
+import PlanesCliente from './pages/Client/PlansPage/PlansClient';
 import PlanesAdmin from './pages/Management/ManagePlans/PlansAdmi';
 import ClientPayments from './pages/Client/PaymentsPage/ClienPayments';
 import AdminPayments from './pages/Management/ManagementPayments/AdminPayments';
 import Register from './pages/Auth/RegisterPage/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import RoleSelector from './components/RoleSelector/RoleSelector';*/
+import RoleSelector from './components/RoleSelector/RoleSelector';
 import Carousel from './components/Carousel/Carousel';
 import Products from './components/Products/Products';
 import AdminPage from './components/adminEmpleadoIndex/adminEmpleadoIndex';
-//import VerCliente from './components/VerCliente/VerCliente';
-
-//const isAdmin = true;
+import VerCliente from './components/VerCliente/VerCliente';
+import LoginRegistro from './pages/Auth/LoginPage/LoginPage';
+import Login from './pages/Auth/LoginPage/Login';
+const isAdmin = true;
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
             }
           />
           
-          <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
+          <Route path="/Login/*" element={<Login />} />
         </Routes>
       </div>
     </Router>
