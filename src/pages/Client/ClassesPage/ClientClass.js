@@ -1,19 +1,20 @@
 import React from 'react';
-import Plans from '../../../components/Plans/Plans';
+
+import { Calendar } from 'react-big-calendar';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 
-function PlanesCliente() {
+function ClientClass() {
   return (
-    <div className="ClientPlansContainer">
+    <div className="ClientProductsContainer">
       <Header />
        <center>
-        <h2>¡Nuestros Planes! </h2>
+        <h2>¡Mira nuestras clases! </h2>
         
-        <Plans  /> 
+        <Calendar  /> 
         </center>
         <Footer />
     </div>
 );
 }
-export default PlanesCliente;
+export default ClientClass;
