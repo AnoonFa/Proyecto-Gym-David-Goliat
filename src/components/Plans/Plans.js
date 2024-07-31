@@ -13,6 +13,7 @@ function Plans() {
                     <div className='PlanDetails1'>
                         <p>Acceso completo por un mes</p>
                         <Button variant="add">Ver</Button>
+                        
                     </div>
                 </div>
                 <div className="Plan">

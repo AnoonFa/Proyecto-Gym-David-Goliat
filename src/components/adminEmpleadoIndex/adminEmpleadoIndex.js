@@ -24,7 +24,9 @@ function AdminPage() {
         <Route path="Productos" element={<VerProducto />} />
         <Route path="resultados" element={<ProductForm />} />
         {/* Otras rutas aquí */}
-      </Routes>
+ 
+      </Routes>    
+    <Footer />
     </>
   );
 }

@@ -1,31 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from '../../../components/Header/Header.js';
-import Footer from '../../../components/Footer/Footer.js';
+import { Routes, Route } from 'react-router-dom';
+import Header from '../../../components/Header/Header';
+import Footer from '../../../components/Footer/Footer';
 import LoginRegistro from './LoginPage';
-import AdminPage from '../../../components/adminEmpleadoIndex/adminEmpleadoIndex.js';
-
+import AdminPage from '../../../components/adminEmpleadoIndex/adminEmpleadoIndex';
+import ClientPage from '../../../components/IndexCliente/ClienteIndex';
 
 function LoginP() {
-    return (
-        <div>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Header />
-                    <LoginRegistro />
-                  <Footer />
-                </>
-                
-              }
-            />
-            <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
-          </Routes>
-        </div>
-    );
-  }
-  
-  export default LoginP;
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<LoginRegistro />} />
+        <Route path="/ClienteIndex/*" element={<ClientPage />} />
+        <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
+
+export default LoginP;
+
   
