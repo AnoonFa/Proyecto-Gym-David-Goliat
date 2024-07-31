@@ -12,11 +12,12 @@
     width: 100%;
     height: 100%;
     margin-top: 80px; 
+    margin-left: 122px;
 }
 
 .fondo {
     position: relative;
-    width: 500px; /* Ajustado para ser más grande */
+    width: 100%; /* Ajustado para ocupar todo el contenedor */
     height: auto;
     padding: 20px;
     background-color: rgb(255, 255, 255);
@@ -26,6 +27,8 @@
     display: flex;
     align-items: center;
     transition: height .2s ease;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .fondo .contenedor-form {
@@ -97,11 +100,11 @@
 .upload-section .contenedor-input {
     margin-bottom: 10px; /* Añadir espacio entre los campos */
 }
-.Upload{
-
+.Upload {
     display: flex;
     transform: translate(0, -60%);
 }
+
 .btn {
     width: 100%;
     height: 45px;

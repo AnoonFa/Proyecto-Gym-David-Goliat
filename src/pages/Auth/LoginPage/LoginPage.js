@@ -1,4 +1,5 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 import { FaUser, FaLock, FaBriefcase } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -74,7 +75,6 @@ const LoginRegistro = () => {
           
         </div>
       </div>
-
   );
 };
 

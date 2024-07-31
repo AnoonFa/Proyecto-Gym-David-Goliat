@@ -13,10 +13,11 @@ import RoleSelector from './components/RoleSelector/RoleSelector';
 import Carousel from './components/Carousel/Carousel';
 import Products from './components/Products/Products';
 import AdminPage from './components/adminEmpleadoIndex/adminEmpleadoIndex';
-import VerCliente from './components/VerCliente/VerCliente';
-import LoginRegistro from './pages/Auth/LoginPage/LoginPage';
-import Login from './pages/Auth/LoginPage/Login';
-const isAdmin = true;
+import RegisterForm from './pages/Auth/RegisterPage/Register';
+import LoginPage from './pages/Auth/LoginPage/LoginPage';
+import VerProducto from './components/VerProductos/VerProductos';
+import ProductForm from './Forms/ProductForm/ProductForm'; 
+//const isAdmin = true;
 
 function App() {
   return (
@@ -35,8 +36,11 @@ function App() {
               </>
             }
           />
-          
           <Route path="/Login/*" element={<Login />} />
+          <Route path="/LoginPage/*" element={<LoginPage />} />
+          <Route path="/Register*" element={<RegisterForm />} />
+          <Route path="/Productos*" element={<VerProducto />} />
+          <Route path="/ProductForm*" element={<ProductForm />} />
         </Routes>
       </div>
     </Router>

@@ -1,25 +1,28 @@
 import React from 'react';
-import './VerCliente.css';
+import './VerProductos.css';
+import { useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 
-function VerCliente() {
+function VerProducto() {
+  const navigate = useNavigate();
+
+  const handleBuscarClick = () => {
+    navigate('/ProductForm'); // Redirige a la página de resultados
+  };
+
   return (
-    <div className="VerCliente">
-      <h2>Buscar cliente</h2>
+    <div className="VerProducto">
+      <h2>Buscar producto</h2>
       <div className="ClienteForm">
         <div>
           <label>Nombre: </label>
           <input type="text" />
         </div>
         <div>
-          <label>Plan: </label>
+          <label>Precio: </label>
           <input type="text" />
         </div>
-        <div>
-          <label>Teléfono: </label>
-          <input type="text" />
-        </div>
-        <Button>Buscar</Button>
+        <Button onClick={handleBuscarClick}>Buscar</Button>
       </div>
       <div className="ClienteDatabase">
         <h3>Base de datos de los Clientes</h3>
@@ -42,11 +45,11 @@ function VerCliente() {
           </div>
         </div>
         <div className="Boton">
-        <Button> Agregar Cliente</Button>
+          <Button>Agregar Cliente</Button>
         </div>
       </div>
     </div>
   );
 }
 
-export default VerCliente;
+export default VerProducto;

@@ -26,18 +26,19 @@
 .LogoImage {
     width: 200px; /* Ajusta el tamaño del logo */
     height: auto;
-    margin-left: 55%;
+    margin-left: 29%;
 }
 
 .SearchBarWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex: 1;
+    position: relative;
+    right: 120px;
 }
 
 .SearchBar {
-    width: 100%;
+    width: 700px;
     max-width: 1000px; /* Haz la barra de búsqueda más grande */
     height: 57px;
     background: #F7F2FA;
@@ -47,7 +48,7 @@
     align-items: center;
     box-sizing: border-box;
     position: relative;
-    left: 190px;
+
 }
 
 .StateLayer {
@@ -55,6 +56,7 @@
     display: flex;
     padding: 0 15px;
     box-sizing: border-box;
+
 }
 
 .LeadingIcon, .StTrailingIcon {
@@ -114,7 +116,7 @@
 
 .LoginButton {
     margin-left: 20px;
-  }
+}
   
   .LoginButtonLink {
     display: inline-block;
@@ -127,13 +129,13 @@
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    margin-right: 119px;
-  }
+    margin-left: 100px;
+}
   
   .LoginButtonLink:hover {
     background-color: #F7F2FA;
     color: #FFC120;
-  }
+}
 
 
 .Options a {
