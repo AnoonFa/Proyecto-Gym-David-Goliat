@@ -9,7 +9,9 @@ function Header() {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/LoginPage');
+
+    navigate('/Login');
+
   };
 
   return (

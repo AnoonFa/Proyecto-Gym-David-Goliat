@@ -17,6 +17,7 @@ import RegisterForm from './pages/Auth/RegisterPage/Register';
 import LoginPage from './pages/Auth/LoginPage/LoginPage';
 import VerProducto from './components/VerProductos/VerProductos';
 import ProductForm from './Forms/ProductForm/ProductForm'; 
+import LoginP from './pages/Auth/LoginPage/Login';
 //const isAdmin = true;
 
 function App() {
@@ -36,8 +37,9 @@ function App() {
               </>
             }
           />
-          <Route path="/Login/*" element={<Login />} />
-          <Route path="/LoginPage/*" element={<LoginPage />} />
+          
+          <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
+          <Route path="/Login/*" element={<LoginP />} />
           <Route path="/Register*" element={<RegisterForm />} />
           <Route path="/Productos*" element={<VerProducto />} />
           <Route path="/ProductForm*" element={<ProductForm />} />

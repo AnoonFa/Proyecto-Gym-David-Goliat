@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../../../components/Header/Header.js';
 import Footer from '../../../components/Footer/Footer.js';
 import LoginRegistro from './LoginPage';
-import ClientPage from '../../Client/IndexCliente/ClienteIndex';
+import AdminPage from '../../../components/adminEmpleadoIndex/adminEmpleadoIndex.js';
 
 
-function Login() {
+function LoginP() {
     return (
-
         <div>
           <Routes>
             <Route
@@ -19,15 +18,14 @@ function Login() {
                     <LoginRegistro />
                   <Footer />
                 </>
+                
               }
             />
-
-           
+            <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
           </Routes>
         </div>
-
     );
   }
   
-  export default Login;
+  export default LoginP;
   

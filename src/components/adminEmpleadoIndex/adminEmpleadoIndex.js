@@ -2,16 +2,17 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/HeaderAdmin'; 
 import Footer from '../Footer/Footer'; 
+import VerProducto from '../VerProductos/VerProductos';
 import VerCliente from '../VerCliente/VerCliente';
 import RegisterForm from '../../pages/Auth/RegisterPage/Register';
-import VerProducto from '../../components/VerProductos/VerProductos';
 import ProductForm from '../../Forms/ProductForm/ProductForm';
+
 
 
 function AdminPage() {
   return (
     <>
-      <Header />
+     <Header />
       <Routes>
         <Route path="/" element={<h2>Bienvenido, Administrador</h2>} />
         <Route path="VerCliente" element={
@@ -24,7 +25,6 @@ function AdminPage() {
         <Route path="resultados" element={<ProductForm />} />
         {/* Otras rutas aquí */}
       </Routes>
-      <Footer />
     </>
   );
 }

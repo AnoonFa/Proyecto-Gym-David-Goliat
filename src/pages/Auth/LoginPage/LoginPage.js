@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import React, { useState} from 'react';
 import './LoginPage.css';
 import { FaUser, FaLock, FaBriefcase } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const LoginRegistro = () => {
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
@@ -21,6 +22,8 @@ const LoginRegistro = () => {
       navigate('/adminEmpleadoIndex');
     } else {
       alert('Por favor, selecciona un rol válido');
+
+
     }
   };
 
@@ -28,6 +31,7 @@ const LoginRegistro = () => {
     <div className="fondo-wrapper">
       <div className="fondo">
         <div className='contenedor-form login'>
+
           <form onSubmit={handleSubmit}>
             <h2>Iniciar sesión</h2>
             <div className="contenedor-input">
@@ -57,10 +61,12 @@ const LoginRegistro = () => {
                 required
               >
                 <option value="" disabled>Selecciona tu rol</option>
+
                 <option value="admin">Administrador</option>
                 <option value="employee">Empleado</option>
                 <option value="client">Cliente</option>
               </select>
+
                 <FaBriefcase className='icono' />
               </div>
               <div className="recordar">
@@ -72,7 +78,6 @@ const LoginRegistro = () => {
             </form>
           </div>
 
-          
         </div>
       </div>
   );
