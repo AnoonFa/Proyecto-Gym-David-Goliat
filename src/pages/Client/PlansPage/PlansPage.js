@@ -7,13 +7,13 @@ import Header from '../../../components/Header/Header';
 function PlanesCliente() {
   return (
     <div className="ClientPlansContainer">
-
+      <Header />
        <center>
         <h2>¡Nuestros Planes! </h2>
         
         <Plans  /> 
         </center>
-
+        <Footer />
     </div>
 );
 }

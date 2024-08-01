@@ -17,7 +17,8 @@
   import PlanDetails from "./pages/Planes/VerPlan";
   import ClientClass from "./pages/Client/ClassesPage/ClassesPage";
   import ProductsClient from "./pages/Client/ProductsPage/ProductsPage";
-  import RutinesPage from "./pages/Client/RoutinesPage/RoutinesPage"; // Importa RutinesPage
+  import RutinesPage from "./pages/Client/RoutinesPage/RoutinesPage"; 
+  import PlanesCliente from "./pages/Client/PlansPage/PlansPage";
 
   function App() {
     return (
@@ -49,6 +50,7 @@
             <Route path="/ClientClass/*" element={<ClientClass />} />
             <Route path="/ProductsClient/*" element={<ProductsClient />} />
             <Route path="/RutinesClient/*" element={<RutinesPage />} /> {/* Nueva ruta */}
+            <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
           </Routes>
         </div>
       </Router>
