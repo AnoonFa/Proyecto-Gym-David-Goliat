@@ -1,25 +1,92 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer/Footer';
-import LoginRegistro from './LoginPage';
-import AdminPage from '../../../components/adminEmpleadoIndex/adminEmpleadoIndex';
-import ClientPage from '../../../components/IndexCliente/ClienteIndex';
+// Importamos React y el hook personalizado useAuth
+import React, { useState } from 'react';
+import './Login.css';
+import { useAuth } from '../../../context/RoleContext';
+import { FaUser, FaLock, FaBriefcase } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-function LoginP() {
+// Definimos el componente Login como una función flecha
+const Login = () => {
+  // Obtenemos setUser del contexto para actualizar el estado del usuario
+  const { setUser } = useAuth();
+  // Estado local para manejar el rol del usuario, nombre y contraseña
+  const [role, setRole] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+  // Función para manejar el inicio de sesión
+  const handleLogin = () => {
+     // Dependiendo del rol lo dirige a su pagina
+     // Logica de autenticación
+    if (role === 'client') {
+      navigate('/ClienteIndex');
+    } else if (role === 'admin') {
+      navigate('/adminEmpleadoIndex');
+    } else if (role === 'employee') {
+      navigate('/adminEmpleadoIndex');
+    } else {
+      alert('Por favor, selecciona un rol válido');
+
+    }
+    // Obtenemos el rol del usuario después de la autenticación
+    setRole({role,  username});
+  };
+
   return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<LoginRegistro />} />
-        <Route path="/ClienteIndex/*" element={<ClientPage />} />
-        <Route path="/adminEmpleadoIndex/*" element={<AdminPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <div className="fondo-wrapper">
+      <div className="fondo">
+        <div className='contenedor-form login'>
+
+        <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }}>
+            <h2>Iniciar sesión</h2>
+            <div className="contenedor-input">
+              <input 
+                type="text" 
+                placeholder='Username' 
+                value={username} 
+                onChange={(e) => setUsername(e.target.value)} 
+                required 
+              />
+              <FaUser className='icono' />
+            </div>
+            <div className="contenedor-input">
+              <input 
+                type="password" 
+                placeholder='Password' 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+                required 
+              />
+              <FaLock className='icono' />
+            </div>
+            <div className="contenedor-input">
+              <select 
+                value={role} 
+                onChange={(e) => setRole(e.target.value)} 
+                required
+              >
+                <option value="" disabled>Selecciona tu rol</option>
+
+                <option value="admin">Administrador</option>
+                <option value="employee">Empleado</option>
+                <option value="client">Cliente</option>
+              </select>
+
+                <FaBriefcase className='icono' />
+              </div>
+              <div className="recordar">
+                <label><input type="checkbox" /> Recordar sesión</label>
+                <a href='#'>Olvidé la contraseña?</a>
+              </div>
+               <button type="submit" className="btn">Iniciar sesión</button>
+              
+            </form>
+          </div>
+
+        </div>
+      </div>
   );
-}
+};
 
-export default LoginP;
-
-  
+export default Login;
