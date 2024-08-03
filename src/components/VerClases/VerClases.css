@@ -1,0 +1,157 @@
+.calendar-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
+
+.calendar-header {
+  background-color: #263493;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.calendar-header h1 {
+  margin: 0;
+}
+
+.calendar-month {
+  margin-right: 20px;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.calendar th {
+  background-color: #6a86f3;
+  color: white;
+}
+
+.calendar td {
+  background-color: #e8ebfe;
+}
+
+.calendar td:first-child {
+  background-color: #6a86f3;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.ingresar-clase,
+.agregar-clase {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.ingresar-clase {
+  background-color: #fc4c4e;
+  color: white;
+}
+
+.agregar-clase {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.calendar-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
+
+.calendar-header {
+  background-color: #263493;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.calendar-header h1 {
+  margin: 0;
+}
+
+.calendar-month {
+  margin-right: 20px;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.calendar th {
+  background-color: #6a86f3;
+  color: white;
+}
+
+.calendar td {
+  background-color: #e8ebfe;
+}
+
+.calendar td:first-child {
+  background-color: #6a86f3;
+  color: white;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.ingresar-clase,
+.agregar-clase {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.ingresar-clase {
+  background-color: #fc4c4e;
+  color: white;
+}
+
+.agregar-clase {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}

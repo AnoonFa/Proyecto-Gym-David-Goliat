@@ -7,13 +7,13 @@ import Footer from '../../../components/Footer/Footer';
 function ProductsClient() {
   return (
     <div className="ClientProductsContainer">
-      <Header />
+      
        <center>
         <h2>¡Nuestros Productos! </h2>
         
         <Products  /> 
         </center>
-        <Footer />
+        
     </div>
 );
 }

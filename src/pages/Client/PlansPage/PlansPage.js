@@ -1,4 +1,5 @@
 import React from 'react';
+import './PlansPage.css';
 import Plans from '../../../components/Plans/Plans';
 import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
