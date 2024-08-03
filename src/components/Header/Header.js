@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Header.css'
+import './header.css'
 import logo from '../../assets/images/David&GoliatLogo.png';
 import logoutIcon from '../../assets/icons/LogOut.png'; 
 import { useAuth } from '../../context/RoleContext';

@@ -6,7 +6,7 @@
   import PlansAdmin from "./components/Plans/PlansAdmin";
   import RegisterForm from "./pages/Auth/RegisterPage/Register";
   import ClasesForm from "./Forms/ClasesForm/ClasesForm";
-  import LoginP from "./pages/Auth/LoginPage/Login";
+  import Login from "./pages/Auth/LoginPage/Login";
   import ClientPage from "./components/IndexCliente/IndexCliente";
   import AdminPage from "./components/adminEmpleadoIndex/adminEmpleadoIndex";
   import VerProducto from "./components/VerProductos/VerProductos";
@@ -19,6 +19,8 @@
   import ProductsClient from "./pages/Client/ProductsPage/ProductsPage";
   import RutinesPage from "./pages/Client/RoutinesPage/RoutinesPage"; 
   import PlanesCliente from "./pages/Client/PlansPage/PlansPage";
+  import { AuthProvider } from "./context/RoleContext";
+  import LoginP from "./pages/Auth/LoginPage/LoginPage";
 
   function App() {
     return (
@@ -31,7 +33,7 @@
                 element={
                   <>
                     <Header />
-                    <Login />
+                    <Carousel/>
                     <Plans />
                     <Products />
                     <Footer />

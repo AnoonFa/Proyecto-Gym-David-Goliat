@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
 import AdminPage from '../../../components/adminEmpleadoIndex/adminEmpleadoIndex';
-import ClientPage from '../../../components/IndexCliente/ClienteIndex';
+import ClientPage from '../../../components/IndexCliente/IndexCliente';
 import Login from '../../../pages/Auth/LoginPage/Login';
 
 function LoginP() {

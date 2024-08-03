@@ -1,16 +1,7 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Header from '../Header/Header'; 
-import Footer from '../Footer/Footer'; 
-import VerProducto from '../VerProductos/VerProductos';
-import VerCliente from '../VerCliente/VerCliente';
-import RegisterForm from '../../pages/Auth/RegisterPage/Register';
-import ProductForm from '../../Forms/ProductForm/ProductForm';
-
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "../Header/HeaderAdmin";
+import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import VerProducto from "../VerProductos/VerProductos";
 import VerCliente from "../VerCliente/VerCliente";

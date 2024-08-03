@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Header from '../Header/HeaderCliente';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ClientClass from '../../pages/Client/ClassesPage/ClassesPage';
 import PlanesCliente from '../../pages/Client/PlansPage/PlansPage';
