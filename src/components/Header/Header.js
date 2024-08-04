@@ -38,34 +38,33 @@ const Header = () => {
         {/* Enlaces para administrador si esta autenticado */}
         {user.role === 'admin' && (
             <>
-              <a href="/IndexCliente/Client" className="Profile">Clases</a>
-              <a href="/IndexCliente/PlanesCliente" className="Profile">Planes</a>
-              <a href="/IndexCliente/ProductsClient" className="Profile">Productos</a>
-              <a href="/IndexCliente/RutinesClient" className="Profile">Rutinas</a>
-              <a href="/IndexCliente/Ticketera" className="Profile">Ticketera</a>
-              <a href="/IndexCliente/Pagos" className="Profile">Pagos</a>
+              <button onClick={() => handleNavigation('/IndexCliente/Client')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/IndexCliente/PlanesCliente')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/IndexCliente/ProductsClient')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/IndexCliente/RutinesClient')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
+              <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
             </>
           )}
         {/* Enlaces para Empleado si esta autenticado */}
         {user.role === 'employee' && (
             <>
-              <a href="/IndexCliente/Client" className="Profile">Clases</a>
-              <a href="/IndexCliente/PlanesCliente" className="Profile">Planes</a>
-              <a href="/IndexCliente/ProductsClient" className="Profile">Productos</a>
-              <a href="/IndexCliente/RutinesClient" className="Profile">Rutinas</a>
-              <a href="/IndexCliente/Ticketera" className="Profile">Ticketera</a>
-              <a href="/IndexCliente/Pagos" className="Profile">Pagos</a>
+              <button onClick={() => handleNavigation('/IndexCliente/Client')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/IndexCliente/PlanesCliente')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/IndexCliente/ProductsClient')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/IndexCliente/RutinesClient')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
+              <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
             </>
           )}
         {/* Enlaces para Cliente si esta autenticado */}
-       {user.role === 'client' && (
+        {user.role === 'client' && (
             <>
-              <a href="/IndexCliente/ClassesPage/*" className="Profile">Clases</a>
-              <a href="/IndexCliente/Planspage/*" className="Profile">Planes</a>
-              <a href="/IndexCliente/Productspage/*" className="Profile">Productos</a>
-              <a href="/IndexCliente/RoutinesPage/*" className="Profile">Rutinas</a>
-              <a href="/IndexCliente/TicketeraPage/*" className="Profile">Ticketera</a>
-
+              <button onClick={() => handleNavigation('/IndexCliente/ClassesPage/*')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/IndexCliente/PlansPage')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/IndexCliente/ProductsPage')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/IndexCliente/RoutinesPage')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/IndexCliente/TicketeraPage')} className="Profile">Ticketera</button>
             </>
           )}
       </div>

@@ -34,7 +34,6 @@
                   <>
                     <Header />
                     <Carousel/>
-                    <VerClases/>
                     <Plans />
                     <Products />
                     <Footer />
