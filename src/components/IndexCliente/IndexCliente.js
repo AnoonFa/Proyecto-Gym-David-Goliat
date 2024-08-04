@@ -6,11 +6,13 @@ import ClientClass from '../../pages/Client/ClassesPage/ClassesPage';
 import PlanesCliente from '../../pages/Client/PlansPage/PlansPage';
 import ProductsClient from '../../pages/Client/ProductsPage/ProductsPage';
 import RutinesPage from '../../pages/Client/RoutinesPage/RoutinesPage'; // Importa RutinesPage
+import Calendar from '../VerClases/VerClases';
 
 function ClientePage() {
   return (
     <>
       <Header />
+      <Calendar />
       <Routes>
         <Route path="/" element={<h2>Bienvenido, Cliente</h2>} />
         <Route path='ClientClass' element={<ClientClass />} />

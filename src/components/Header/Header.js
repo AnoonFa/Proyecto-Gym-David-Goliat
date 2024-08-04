@@ -10,7 +10,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/Login');
+    navigate('/LoginP');
   };
 
   const handleLogoutClick = () => {
@@ -18,44 +18,56 @@ const Header = () => {
     navigate('/'); // Redirigir al usuario a la página de inicio después de cerrar sesión
   };
 
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+  
   return (
   // Header con logo, botón de inicio de sesión, enlaces a las páginas y botón de logout
   <nav className="header">
     <div className="Rectangle100">
       <div className="DavidGoliat">
-        <a href="#" className="logout">
-          <img src={logo} alt="Logo" className="LogoImage" />
+      <a href="#" className="logout" onClick={() => handleNavigation('/')}>
+      <img src={logo} alt="Logo" className="LogoImage" />
         </a>
       </div>
       
       <div className="nav-links">
-        {/* Enlaces condicionales basados en el rol del usuario */}
-        <a href="" className="Clases">Clases</a>
-        <a href="" className="Planes">Planes</a>
-        <a href="" className="Rutina">Rutina</a>
-        <a href="" className="Productos">Productos</a>
 
         {/* Enlaces para administrador si esta autenticado */}
-        {user.role === 'admin' && <a href="/admin" className="Admin">Clases</a>}
-        {user.role === 'admin' && <a href="/admin" className="Admin">Planes</a>}
-        {user.role === 'admin' && <a href="/admin" className="Admin">Productos</a>}
-        {user.role === 'admin' && <a href="/admin" className="Admin">Rutinas</a>}
-        {user.role === 'admin' && <a href="/admin" className="Admin">Ticketera</a>}  
-        {user.role === 'admin' && <a href="/admin" className="Admin">Pagos</a>}        
-
+        {user.role === 'admin' && (
+            <>
+              <a href="/IndexCliente/Client" className="Profile">Clases</a>
+              <a href="/IndexCliente/PlanesCliente" className="Profile">Planes</a>
+              <a href="/IndexCliente/ProductsClient" className="Profile">Productos</a>
+              <a href="/IndexCliente/RutinesClient" className="Profile">Rutinas</a>
+              <a href="/IndexCliente/Ticketera" className="Profile">Ticketera</a>
+              <a href="/IndexCliente/Pagos" className="Profile">Pagos</a>
+            </>
+          )}
         {/* Enlaces para Empleado si esta autenticado */}
-        {user.role === 'employee' && <a href="/employee" className="Employee">Clases</a>}
-        {user.role === 'employee' && <a href="/employee" className="Employee">Planes</a>} 
-        {user.role === 'employee' && <a href="/employee" className="Employee">Productos</a>}
-        {user.role === 'employee' && <a href="/employee" className="Employee">Ticketera</a>}
-        {user.role === 'employee' && <a href="/employee" className="Employee">Pagos</a>}
-
+        {user.role === 'employee' && (
+            <>
+              <a href="/IndexCliente/Client" className="Profile">Clases</a>
+              <a href="/IndexCliente/PlanesCliente" className="Profile">Planes</a>
+              <a href="/IndexCliente/ProductsClient" className="Profile">Productos</a>
+              <a href="/IndexCliente/RutinesClient" className="Profile">Rutinas</a>
+              <a href="/IndexCliente/Ticketera" className="Profile">Ticketera</a>
+              <a href="/IndexCliente/Pagos" className="Profile">Pagos</a>
+            </>
+          )}
         {/* Enlaces para Cliente si esta autenticado */}
-        {user.role !== 'client' && <a href="/profile" className="Profile">Clases</a>}
-        {user.role!== 'client' && <a href="/profile" className="Profile">Planes</a>}
-        {user.role!== 'client' && <a href="/profile" className="Profile">Productos</a>}
-        {user.role!== 'client' && <a href="/profile" className="Profile">Ticketera</a>}
-        {user.role !== 'client' && <a href="/profile" className="Profile">Pagos</a>}
+       {user.role === 'client' && (
+            <>
+              <a href="/IndexCliente/ClassesPage/*" className="Profile">Clases</a>
+              <a href="/IndexCliente/Planspage/*" className="Profile">Planes</a>
+              <a href="/IndexCliente/Productspage/*" className="Profile">Productos</a>
+              <a href="/IndexCliente/RoutinesPage/*" className="Profile">Rutinas</a>
+              <a href="/IndexCliente/TicketeraPage/*" className="Profile">Ticketera</a>
+
+            </>
+          )}
       </div>
       
       <div className="login-container">

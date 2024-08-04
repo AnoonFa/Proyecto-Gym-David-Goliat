@@ -18,17 +18,18 @@ const Login = () => {
   // Función para manejar el inicio de sesión
   const handleLogin = () => {
      // Dependiendo del rol lo dirige a su pagina
+     if (role && username && password) {
+      // Actualiza el estado del usuario con el rol y el nombre de usuario
+      setUser({ role, username });
      // Logica de autenticación
     if (role === 'client') {
       navigate('/ClienteIndex');
-    } else if (role === 'admin') {
+    } else if (role === 'admin' || role === 'employee') {
       navigate('/adminEmpleadoIndex');
-    } else if (role === 'employee') {
-      navigate('/adminEmpleadoIndex');
-    } else {
-      alert('Por favor, selecciona un rol válido');
-
     }
+  } else {
+    alert('Por favor, completa todos los campos y selecciona un rol válido');
+  }
     // Obtenemos el rol del usuario después de la autenticación
     setRole({role,  username});
   };
