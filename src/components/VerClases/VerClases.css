@@ -1,15 +1,23 @@
+/* src/components/CalendarClases/VerClases.css */
+
+.calendar-container {
+  padding: 20px;
+}
+
 .calendar-table {
+  margin-top: 5%;
   border-collapse: collapse;
   border-spacing: 10px 5px;
   width: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .calendar-header {
   position: sticky;
-  background: white;
+  background: rgb(255, 255, 255);
   top: 0px;
   z-index: 2;
-  border-bottom: 1px solid rgb(60, 60, 59);
+  border-top: 2px solid rgb(60, 60, 90);
   line-height: 2;
 }
 
@@ -20,7 +28,23 @@
   height: 50px;
   font-weight: 400;
   min-width: 100px;
-  border-bottom: 2px dashed rgba(60, 60, 59, 0.1);
+  border-bottom: 2px dashed rgb(111, 111, 114);
+}
+
+td, th {
+  border: 2px dashed rgba(197, 197, 255, 0.233);
+  position: relative;
+  padding: 10px 10px;
+}
+
+th {
+  background: rgb(61, 61, 233);
+  color: white;
+}
+
+span {
+  color: white;
+  font-size: medium;
 }
 
 .containerDayCalendar {
@@ -47,10 +71,87 @@
   font-size: 12px;
 }
 
+.itemCalendarLesson {
+  background-color: #ffc107;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .itemCalendarLesson h5 {
   margin: 0;
 }
 
 .itemCalendarLesson p {
   margin: 0;
+}
+
+.itemCalendarLesson button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.itemCalendarLesson button:hover {
+  background-color: #c82333;
+}
+
+.Button-Ver-Añadir {
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Asegura que el botón esté en una posición fija en la pantalla */
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Asegura que el botón esté en una capa superior */
+  padding: 10px;
+}
+
+.AddButtonLink {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+
+.add-class-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  position: fixed; /* Asegura que el formulario esté en una posición fija */
+  top: 100px; /* Ajusta la posición según sea necesario */
+  right: 20px;
+  z-index: 9999; /* Asegura que el formulario esté en una capa superior */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para depuración */
+  padding: 20px;
+}
+
+
+.add-class-form input,
+.add-class-form select,
+.add-class-form button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.add-class-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-class-form button:hover {
+  background-color: #0056b3;
 }

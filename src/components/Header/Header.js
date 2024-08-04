@@ -38,9 +38,9 @@ const Header = () => {
         {/* Enlaces para administrador si esta autenticado */}
         {user.role === 'admin' && (
             <>
-              <button onClick={() => handleNavigation('/IndexCliente/Client')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
               <button onClick={() => handleNavigation('/IndexCliente/PlanesCliente')} className="Profile">Planes</button>
-              <button onClick={() => handleNavigation('/IndexCliente/ProductsClient')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/ProductsPage/')} className="Profile">Productos</button>
               <button onClick={() => handleNavigation('/IndexCliente/RutinesClient')} className="Profile">Rutinas</button>
               <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
               <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
@@ -49,9 +49,9 @@ const Header = () => {
         {/* Enlaces para Empleado si esta autenticado */}
         {user.role === 'employee' && (
             <>
-              <button onClick={() => handleNavigation('/IndexCliente/Client')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
               <button onClick={() => handleNavigation('/IndexCliente/PlanesCliente')} className="Profile">Planes</button>
-              <button onClick={() => handleNavigation('/IndexCliente/ProductsClient')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/ProductsPage')} className="Profile">Productos</button>
               <button onClick={() => handleNavigation('/IndexCliente/RutinesClient')} className="Profile">Rutinas</button>
               <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
               <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
@@ -60,11 +60,11 @@ const Header = () => {
         {/* Enlaces para Cliente si esta autenticado */}
         {user.role === 'client' && (
             <>
-              <button onClick={() => handleNavigation('/IndexCliente/ClassesPage/*')} className="Profile">Clases</button>
-              <button onClick={() => handleNavigation('/IndexCliente/PlansPage')} className="Profile">Planes</button>
-              <button onClick={() => handleNavigation('/IndexCliente/ProductsPage')} className="Profile">Productos</button>
-              <button onClick={() => handleNavigation('/IndexCliente/RoutinesPage')} className="Profile">Rutinas</button>
-              <button onClick={() => handleNavigation('/IndexCliente/TicketeraPage')} className="Profile">Ticketera</button>
+              <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
+              <button onClick={() => handleNavigation('/PlansPage/')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/ProductsPage/')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/RutinesClient/')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/')} className="Profile">Ticketera</button>
             </>
           )}
       </div>
