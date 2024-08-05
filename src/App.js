@@ -16,12 +16,15 @@
   import PlanDetails from "./pages/Planes/VerPlan";
   import RutinesPage from "./pages/Client/RoutinesPage/RoutinesPage"; 
   import PlanesCliente from "./pages/Client/PlansPage/PlansPage";
-  import { AuthProvider } from "./context/RoleContext";
+  import { AuthProvider } from "./context/AuthContext";
   import LoginP from "./pages/Auth/LoginPage/LoginPage";
   import ProductsPage from "./pages/Client/ProductsPage/ProductsPage";
   import ClasesPage from "./pages/Client/ClassesPage/ClassesPage";
   import VerCliente from "./components/VerCliente/VerCliente";
   import ClienteForm from "./Forms/ClienteForm/ClienteForm";
+  import { ClassesProvider } from "./context/ClasesContext";
+  import { ProductsProvider } from "./context/ProductsContext";
+  import { RoleProvider } from "./context/RoleContext";
 
 function App() {
   return (
