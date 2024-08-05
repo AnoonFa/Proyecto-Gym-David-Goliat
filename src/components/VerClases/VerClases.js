@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react'; // Agregamos useContext
 import './VerClases.css';
-import { useAuth } from '../../context/RoleContext'; // Importamos el contexto de autenticación
+import { useAuth } from '../../context/RoleContext'; 
 import { useNavigate } from 'react-router-dom';
+import { ClassesContext } from '../../context/ClasesContext';
 
 const CalendarClases = () => {
   // Estado para manejar los días de la semana
-  const [days, setDays] = useState([]);
-  
-  // Estado para manejar las clases
-  const [classes, setClasses] = useState([
+  const { classes, setClasses } = useContext(ClassesContext); // Usar el contexto de clases
 
-  ]);
-  
+  // Estado para manejar las clases
+  const [days, setDays] = useState([]);
+
   // Estado para manejar los datos del nuevo formulario de clase
   const [newClass, setNewClass] = useState({
     name: '',
@@ -19,6 +18,7 @@ const CalendarClases = () => {
     time: '',
     day: '',
     timeSlot: '',
+    description : '',
   });
 
   // Estado para controlar la visibilidad del formulario
@@ -39,11 +39,10 @@ const CalendarClases = () => {
         date: date.getDate()
       });
     }
-
     setDays(updatedDays);
   }, []);
 
-  const { user } = useAuth(); // Usamos el contexto de autenticación
+  const { user } = useAuth();  // Usamos el contexto de autenticación
   const navigate = useNavigate();
 
   // Maneja el envío del formulario para agregar una nueva clase
@@ -58,6 +57,7 @@ const CalendarClases = () => {
       time: '',
       day: '',
       timeSlot: '',
+      decription: '',
     });
     setShowForm(false); // Ocultar el formulario después de agregar la clase
   };
@@ -77,13 +77,15 @@ const CalendarClases = () => {
   return (
     <div className="calendar-container">
       <div style={{ overflowX: 'auto' }}>
+
         <table className="calendar-table">
           <thead className="calendar-header">
+          <center><h1>Clases</h1></center>
             <tr>
               <td></td>
               {days.map((day, index) => (
                 <th key={index}>
-                  <div className={`containerDayCalendar ${index === 0 ? 'colorPrimCalendar' : 'colorSecuCalendar'}`}>
+   <div className={`containerDayCalendar ${index === 0 ? 'colorPrimCalendar' : 'colorSecuCalendar'}`}>
                     <span>{`${day.day} ${day.date}`}</span>
                   </div>
                 </th>
@@ -91,14 +93,11 @@ const CalendarClases = () => {
             </tr>
           </thead>
           <tbody>
-            {/* Mapeamos las franjas horarias */}
             {['05:00 AM', '06:00 AM', '07:00 AM', '08:00 AM', '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', '02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM', '09:00 PM', '10:00 PM', '11:00 PM'].map((time, index) => (
               <tr key={index}>
                 <th>{time}</th>
-                {/* Mapeamos los días de la semana para cada franja horaria */}
                 {Array(7).fill(null).map((_, idx) => (
                   <td key={idx} style={{ position: 'relative' }}>
-                    {/* Filtramos y mostramos las clases correspondientes a la franja horaria y día */}
                     {classes
                       .filter((classItem) => classItem.timeSlot === time && classItem.day == idx)
                       .map((filteredClass, classIndex) => (
@@ -121,7 +120,6 @@ const CalendarClases = () => {
         </table>
       </div>
       
-      {/* Mostrar botón de añadir clase para roles que no sean 'client' */}
       {user.role !== 'client' && (
         <div className="Button-Ver-Añadir" style={{ marginTop: '20px' }}>
           <button onClick={() => setShowForm(!showForm)} className="AddButtonLink">
@@ -129,7 +127,6 @@ const CalendarClases = () => {
           </button>
         </div>
       )}
-      {/* Formulario para añadir nueva clase */}
       {showForm && (
         <form onSubmit={handleAddClass} className="add-class-form">
           <input
@@ -181,6 +178,13 @@ const CalendarClases = () => {
               <option key={index} value={timeSlot}>{timeSlot}</option>
             ))}
           </select>
+          <input
+            type="text"
+            placeholder="Description"
+            value={newClass.description}
+            onChange={(e) => setNewClass({ ...newClass, description: e.target.value })}
+            required
+          />
           <button type="submit">Agregar Clase</button>
         </form>
       )}

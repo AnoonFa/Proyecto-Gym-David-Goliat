@@ -1,0 +1,40 @@
+.no-encontrada {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    max-width: 600px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5%;
+    left: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .class-image{
+     display: flex;
+    width: 100%;
+    height: auto;
+  }
+  
+  .class-detail {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .class-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .class-detail p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
