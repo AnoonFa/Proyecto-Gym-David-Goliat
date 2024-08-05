@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './VerCliente.css';
 import Button from '../Button/Button';
+import ClienteForm from '../../Forms/ClienteForm/ClienteForm'; // Importamos el nuevo formulario
 
 function VerCliente() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAddClientClick = () => {
+    setShowForm(true);
+  };
+
   return (
     <div className="VerCliente">
       <h2>Buscar cliente</h2>
@@ -19,7 +26,7 @@ function VerCliente() {
           <label>Teléfono: </label>
           <input type="text" />
         </div>
-        <Button>Buscar</Button>
+        <Button onClick={handleAddClientClick}>Buscar</Button>
       </div>
       <div className="ClienteDatabase">
         <h3>Base de datos de los Clientes</h3>
@@ -42,9 +49,10 @@ function VerCliente() {
           </div>
         </div>
         <div className="Boton">
-        <Button> Agregar Cliente</Button>
+          <Button onClick={handleAddClientClick}>Agregar Cliente</Button>
         </div>
       </div>
+      {showForm && <ClienteForm />} {/* Mostrar el formulario si showForm es verdadero */}
     </div>
   );
 }

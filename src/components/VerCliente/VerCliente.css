@@ -4,7 +4,7 @@
     border-radius: 10px;
     color: white;
     margin-top: 8%;
-    width: 150%; /* Mantén el ancho al 60% */
+    width: 90%; /* Mantén el ancho al 60% */
     height: 70%;
     position: relative;
     left: 5%; /* Ajustado para dejar espacio suficiente */
@@ -70,7 +70,7 @@
 
 .VerCliente .ClienteItem input {
     width: 95%;
-    height: 35px;
+    height: 40px;
     margin-right: 10px;
     border-radius: 5px;
 }

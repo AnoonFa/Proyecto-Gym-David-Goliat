@@ -20,6 +20,8 @@
   import LoginP from "./pages/Auth/LoginPage/LoginPage";
   import ProductsPage from "./pages/Client/ProductsPage/ProductsPage";
   import ClasesPage from "./pages/Client/ClassesPage/ClassesPage";
+  import VerCliente from "./components/VerCliente/VerCliente";
+  import ClienteForm from "./Forms/ClienteForm/ClienteForm";
 
   function App() {
     return (
@@ -53,6 +55,8 @@
             <Route path="/ProductsPage/*" element={<ProductsPage />} />
             <Route path="/RutinesClient/*" element={<RutinesPage />} />
             <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
+            <Route path="/VerCliente/*" element={<VerCliente />} />
+            <Route path="/ClienteForm/*" element={<ClienteForm />} />
             </Routes>
           </div>
         </AuthProvider>

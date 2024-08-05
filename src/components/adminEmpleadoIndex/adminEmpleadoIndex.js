@@ -1,11 +1,9 @@
-
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import VerProducto from "../VerProductos/VerProductos";
 import VerCliente from "../VerCliente/VerCliente";
-import RegisterForm from "../../pages/Auth/RegisterPage/Register";
 import ClasesForm from "../../Forms/ClasesForm/ClasesForm";
 import ProductForm from "../../Forms/ProductForm/ProductForm";
 import VerClases from "../VerClases/VerClases";
@@ -23,7 +21,6 @@ function AdminPage() {
           element={
             <div style={{ display: "flex" }}>
               <VerCliente />
-              <RegisterForm />
             </div>
           }
         />

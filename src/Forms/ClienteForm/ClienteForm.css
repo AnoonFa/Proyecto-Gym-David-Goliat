@@ -1,0 +1,73 @@
+.cliente-form {
+  background-image: linear-gradient(to left, #43a1ee, #489fe6, #57a2df, #60aff0);
+  border-radius: 10px;
+  padding: 20px;
+  width: 50%;
+  margin: 20px auto;
+  color: #fff;
+  text-align: center;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px; /* Ajusta según sea necesario */
+}
+
+.form-fields .input-container {
+  display: flex;
+  flex: 1 1 calc(50% - 10px); /* Ocupa la mitad menos el gap */
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-fields input,
+.form-fields select {
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.form-fields .full-width {
+  grid-column: span 2;
+}
+
+.form-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px; /* Espacio entre los iconos */
+}
+
+.user-icon,
+.fingerprint-icon {
+  width: 115px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.form-buttons {
+  margin-top: 20px;
+}
+
+.add-button {
+  padding: 16px 20px;
+  font-size: 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
