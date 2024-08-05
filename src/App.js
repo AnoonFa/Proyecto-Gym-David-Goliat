@@ -23,11 +23,14 @@
   import VerCliente from "./components/VerCliente/VerCliente";
   import ClienteForm from "./Forms/ClienteForm/ClienteForm";
 
-  function App() {
-    return (
-      <Router>
-        <AuthProvider>
-        <div>
+function App() {
+  return (
+    <Router>
+      <RoleProvider>{/* Envuelve  con el proveedor de roles */}
+        <ClassesProvider>
+          <AuthProvider> {/* Envuelve  con el proveedor de clases */}
+        <ProductsProvider>
+          <div>
             <Routes>
               <Route
                 path="/"
@@ -59,9 +62,12 @@
             <Route path="/ClienteForm/*" element={<ClienteForm />} />
             </Routes>
           </div>
-        </AuthProvider>
+          </ProductsProvider>
+          </AuthProvider>
+        </ClassesProvider>
+      </RoleProvider>
     </Router>
-    );
-  }
+  );
+}
 
-  export default App;
+export default App;

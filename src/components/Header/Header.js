@@ -14,23 +14,25 @@ const Header = () => {
   };
 
   const handleLogoutClick = () => {
-    setUser({ role: 'client' }); // Restablecer el rol del usuario al rol por defecto
-    navigate('/'); // Redirigir al usuario a la página de inicio después de cerrar sesión
+    logout(); // Suponiendo que 'logout' es una función que realiza el cierre de sesión
+    handleNavigation('/'); // Redirige al inicio después del logout
   };
 
   const handleNavigation = (path) => {
     navigate(path);
   };
 
-  
+   // Determinar la URL del logo según el rol del usuario
+  const logoPath = user.role === 'client' ? '/IndexCliente' : '/adminEmpleadoIndex';
+
   return (
   // Header con logo, botón de inicio de sesión, enlaces a las páginas y botón de logout
   <nav className="header">
     <div className="Rectangle100">
       <div className="DavidGoliat">
-      <a href="#" className="logout" onClick={() => handleNavigation('/')}>
-      <img src={logo} alt="Logo" className="LogoImage" />
-        </a>
+      <a href="#" className="logo-link" onClick={() => handleNavigation(logoPath)}>
+            <img src={logo} alt="Logo" className="LogoImage" />
+          </a>
       </div>
       
       <div className="nav-links">
@@ -71,15 +73,15 @@ const Header = () => {
       </div>
       
       <div className="login-container">
-        {/* Botón de login/logout basado en si el usuario está autenticado o no */}
-        {user.role === 'client' ? (
-          <button onClick={handleLoginClick} className="LoginButtonLink">Iniciar Sesión</button>
-        ) : (
-          <button onClick={handleLogoutClick} className="LogoutButtonLink">
-            <img src={logoutIcon} alt="Logout" className="LogoutIcon" />
-          </button>
-        )}
-      </div>
+          {/* Botón de login/logout basado en si el usuario está autenticado o no */}
+          {user.role === 'client' ? (
+            <button onClick={handleLoginClick} className="LoginButtonLink">Iniciar Sesión</button>
+          ) : (
+            <button onClick={handleLogoutClick} className="LogoutButtonLink">
+              <img src={logoutIcon} alt="Logout" className="LogoutIcon" />
+            </button>
+          )}
+        </div>
     </div>
   </nav>
   );
