@@ -9,6 +9,8 @@ import ProductForm from "../../Forms/ProductForm/ProductForm";
 import VerClases from "../VerClases/VerClases";
 import PlansAdmin from "../Plans/PlansAdmin";
 import PlanDetails from "../../pages/Planes/VerPlan";
+import RutinaAdminIndex from "../Rutina/RutinaAdminIndex";
+
 
 function AdminPage() {
   return (
@@ -30,6 +32,8 @@ function AdminPage() {
         <Route path="ClasesForm" element={<ClasesForm />} />
         <Route path="/PlansAdmin/*" element={<PlansAdmin />} />
         <Route path="PlanDetails/:planId" element={<PlanDetails />} />
+        <Route path="RutinaAdminIndex" element={<RutinaAdminIndex />} />
+
         {/* Otras rutas aquí */}
       </Routes>
       <Footer />

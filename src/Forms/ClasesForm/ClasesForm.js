@@ -17,7 +17,7 @@ const ClasesForm = () => {
 
   return (
     <div className="Fondo">
-      <div className="form-container">
+      <div className="form-con">
         {showModal && (
           <>
             <h2 className="form-title">Nombre clase</h2>

@@ -1,0 +1,45 @@
+.map-container {
+    margin-top: -200px;
+    margin-bottom: -150px;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* El mapa ocupa el doble de espacio que el texto */
+    height: 100vh; /* Altura completa de la ventana */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding: 20px; /* Añade padding alrededor del contenedor */
+  }
+ 
+  .map {
+    height: 60%; /* Asegura que el mapa ocupa todo el alto de su contenedor asignado */
+    width: 100%; /* Asegura que el mapa ocupa todo el ancho de su contenedor asignado */
+  }
+  
+  .text-container {
+    display: flex; /* Usa Flexbox para disposición vertical */
+    flex-direction: column;
+    justify-content: center; /* Alinea el contenido verticalmente al centro */
+    align-items: flex-start; /* Alinea el contenido al inicio (lado izquierdo) */
+    padding-left: 20px; /* Espacio entre el texto y el borde izquierdo del contenedor */
+    height: 100%; /* Asegura que el contenedor de texto ocupa todo el alto de su contenedor */
+  }
+  
+  .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Espacio entre cada línea de texto */
+  }
+  
+  .icon {
+    margin-right: 12px; /* Espacio entre el icono y el texto */
+    margin-top: -13px;
+  }
+  
+  .text-container p {
+    margin-bottom: 12px; /* Añade margen inferior a los párrafos */
+  }
+  
+  .main-text {
+    margin-bottom: 10px; /* Añade margen inferior al título */
+    font-size: 3em;
+  }
+  
+  

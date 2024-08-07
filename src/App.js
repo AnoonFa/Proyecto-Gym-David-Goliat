@@ -22,6 +22,8 @@
   import ClasesPage from "./pages/Client/ClassesPage/ClassesPage";
   import VerCliente from "./components/VerCliente/VerCliente";
   import ClienteForm from "./Forms/ClienteForm/ClienteForm";
+  import RutinaAdminIndex from "./components/Rutina/RutinaAdminIndex";
+  import MapComponent from "./components/Mapa/MapComponent"
   import { ClassesProvider } from "./context/ClasesContext";
   import { ProductsProvider } from "./context/ProductsContext";
   import { RoleProvider } from "./context/RoleContext";
@@ -41,8 +43,9 @@ function App() {
                   <>
                     <Header />
                     <Carousel/>
-                    <Plans />
+                    <MapComponent />
                     <Products />
+                    <Plans />
                     <Footer />
                   </>
                 }
@@ -63,6 +66,7 @@ function App() {
             <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
             <Route path="/VerCliente/*" element={<VerCliente />} />
             <Route path="/ClienteForm/*" element={<ClienteForm />} />
+            <Route path="/RutinaAdminIndex/*" element={<RutinaAdminIndex />} />
             </Routes>
           </div>
           </ProductsProvider>
