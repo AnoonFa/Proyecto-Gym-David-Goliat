@@ -27,6 +27,9 @@
   import { ClassesProvider } from "./context/ClasesContext";
   import { ProductsProvider } from "./context/ProductsContext";
   import { RoleProvider } from "./context/RoleContext";
+import CategoryCircles from "./components/CategoryCircles/CategoryCircles";
+import SearchBar from "./components/SearchBar/SearchBar";
+import ProductPagePersonal from "./pages/Client/ProductsPage/ProductPagePersonal";
 
 function App() {
   return (
@@ -44,7 +47,9 @@ function App() {
                     <Header />
                     <Carousel/>
                     <MapComponent />
-                    <Products />
+                    <SearchBar />
+                    
+                    <CategoryCircles />
                     <Plans />
                     <Footer />
                   </>
@@ -62,6 +67,7 @@ function App() {
             <Route path="PlanDetails/:planId" element={<PlanDetails />} />
             <Route path="/ClasesPage/*" element={<ClasesPage />} />
             <Route path="/ProductsPage/*" element={<ProductsPage />} />
+            <Route path="/products/:category" element={<ProductPagePersonal />} />
             <Route path="/RutinesClient/*" element={<RutinesPage />} />
             <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
             <Route path="/VerCliente/*" element={<VerCliente />} />
