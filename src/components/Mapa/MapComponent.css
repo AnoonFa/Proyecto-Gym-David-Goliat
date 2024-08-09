@@ -1,12 +1,13 @@
 .map-container {
-  margin-top: -200px;
-  margin-bottom: -120px;
-  display: grid;
-  grid-template-columns: 2fr 1fr; /* El iframe ocupa el doble de espacio que el texto */
-  height: 100vh; /* Altura completa de la ventana */
-  align-items: center; /* Alinea verticalmente al centro */
-  padding: 20px; /* Añade padding alrededor del contenedor */
+  margin-top: -61px;
+  margin-bottom: 20px;
+  display: flex;
+  grid-template-columns: 2fr 1fr;
+  height: auto;
+  align-items: center;
+  padding: 20px;
 }
+
 
 .iframe-map {
   height: 60%; /* Asegura que el iframe ocupa el 60% del alto del contenedor asignado */

@@ -39,22 +39,23 @@ const Header = () => {
         {user.role === 'admin' && (
             <>
               <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
-              <button onClick={() => handleNavigation('/adminEmpleadoIndex/')} className="Profile">Planes</button>
-              <button onClick={() => handleNavigation('/adminEmpleadoIndex/RutinaAdminIndex')} className="Profile">Rutinas</button>
-              <button onClick={() => handleNavigation('/adminEmpleadoIndex/VerCliente')} className="Profile">Cliente</button>
+              <button onClick={() => handleNavigation('/PlansPage')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/RoutinesPage')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/VerCliente')} className="Profile">Cliente</button>
               <button onClick={() => handleNavigation('/ProductsPage/')} className="Profile">Productos</button>
-              <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
-              <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
+              <button onClick={() => handleNavigation('/Ticketera')} className="Profile">Ticketera</button>
+              <button onClick={() => handleNavigation('/Pagos')} className="Profile">Pagos</button>
             </>
           )}
         {/* Enlaces para Empleado si esta autenticado */}
         {user.role === 'employee' && (
             <>
               <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
-              <button onClick={() => handleNavigation('/IndexCliente/PlanesCliente')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/PlansPage')} className="Profile">Planes</button>
+              <button onClick={() => handleNavigation('/RoutinesPage')} className="Profile">Rutinas</button>
               <button onClick={() => handleNavigation('/ProductsPage')} className="Profile">Productos</button>
               <button onClick={() => handleNavigation('/IndexCliente/RutinesClient')} className="Profile">Rutinas</button>
-              <button onClick={() => handleNavigation('/IndexCliente/Ticketera')} className="Profile">Ticketera</button>
+              <button onClick={() => handleNavigation('/Ticketera')} className="Profile">Ticketera</button>
               <button onClick={() => handleNavigation('/IndexCliente/Pagos')} className="Profile">Pagos</button>
             </>
           )}

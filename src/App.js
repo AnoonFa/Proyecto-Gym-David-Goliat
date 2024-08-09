@@ -1,5 +1,5 @@
-  import React from "react";
-  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+  import React, { useState } from 'react';
+  import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
   import Header from "./components/Header/Header";
   import Footer from "./components/Footer/Footer";
   import Plans from "./components/Plans/Plans";
@@ -11,7 +11,6 @@
   import VerProducto from "./components/VerProductos/VerProductos";
   import ProductForm from "./Forms/ProductForm/ProductForm";
   import Carousel from "./components/Carousel/Carousel";
-  import Products from "./components/Products/Products";
   import VerClases from "./components/VerClases/VerClases";
   import PlanDetails from "./pages/Planes/VerPlan";
   import RutinesPage from "./pages/Client/RoutinesPage/RoutinesPage"; 
@@ -27,11 +26,27 @@
   import { ClassesProvider } from "./context/ClasesContext";
   import { ProductsProvider } from "./context/ProductsContext";
   import { RoleProvider } from "./context/RoleContext";
-import CategoryCircles from "./components/CategoryCircles/CategoryCircles";
-import SearchBar from "./components/SearchBar/SearchBar";
-import ProductPagePersonal from "./pages/Client/ProductsPage/ProductPagePersonal";
+  import CategoryCircles from "./components/CategoryCircles/CategoryCircles";
+  import SearchBar from "./components/SearchBar/SearchBar";
+  import ProductPagePersonal from "./pages/Client/ProductsPage/ProductPagePersonal";
+  import './Modal.css';
+  import './App.css';
+  import Modal from './components/Modal/Modal';
+  import Comprobant from './pages/Client/PaymentsPage/Comprobant';
+  import Ticketera from './pages/Management/Ticketera/Ticketera';
+
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <Router>
       <RoleProvider>{/* Envuelve  con el proveedor de roles */}
@@ -47,12 +62,15 @@ function App() {
                     <Header />
                     <Carousel/>
                     <MapComponent />
+                    <Plans openModal={handleOpenModal} />
                     <SearchBar />
                     
                     <CategoryCircles />
-                    <Plans />
                     <Footer />
-                  </>
+                    <Modal show={showModal} onClose={handleCloseModal}>
+                  <PaymentForm onClose={handleCloseModal} />
+               || </Modal>
+              </>
                 }
               />
               <Route path="/ClienteIndex/*" element={<ClientPage />} />
@@ -61,18 +79,21 @@ function App() {
               <Route path="/Register/*" element={<RegisterForm />} />
               <Route path="/Productos/*" element={<VerProducto />} />
               <Route path="/ProductForm/*" element={<ProductForm />} />
-            <Route path="/VerClases/*" element={<VerClases />} />
-            <Route path="/ClasesForm/*" element={<ClasesForm />} />
-            <Route path="/PlansAdmin/*" element={<PlansAdmin />} />
-            <Route path="PlanDetails/:planId" element={<PlanDetails />} />
-            <Route path="/ClasesPage/*" element={<ClasesPage />} />
-            <Route path="/ProductsPage/*" element={<ProductsPage />} />
-            <Route path="/products/:category" element={<ProductPagePersonal />} />
-            <Route path="/RutinesClient/*" element={<RutinesPage />} />
-            <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
-            <Route path="/VerCliente/*" element={<VerCliente />} />
-            <Route path="/ClienteForm/*" element={<ClienteForm />} />
-            <Route path="/RutinaAdminIndex/*" element={<RutinaAdminIndex />} />
+              <Route path="/VerClases/*" element={<VerClases />} />
+              <Route path="/ClasesForm/*" element={<ClasesForm />} />
+              <Route path="/PlansAdmin/*" element={<PlansAdmin />} />
+              <Route path="PlanDetails/:planId" element={<PlanDetails />} />
+              <Route path="/ClasesPage/*" element={<ClasesPage />} />
+              <Route path="/ProductsPage/*" element={<ProductsPage />} />
+              <Route path="/products/:category" element={<ProductPagePersonal />} />
+              <Route path="/RutinesClient/*" element={<RutinesPage />} />
+              <Route path="/PlansPage/*" element={<PlanesCliente />} /> 
+              <Route path="/VerCliente/*" element={<VerCliente />} />
+              <Route path="/ClienteForm/*" element={<ClienteForm />} />
+              <Route path="/Comprobant/*" element={<Comprobant />} />
+              <Route path="/Ticketera/*" element={<Ticketera />} />
+              <Route path="/Planes/*" element={<Plans/>} />
+              <Route path="/RutinaAdminIndex/*" element={<RutinaAdminIndex />} />
             </Routes>
           </div>
           </ProductsProvider>
@@ -82,5 +103,71 @@ function App() {
     </Router>
   );
 }
+
+
+
+function PaymentForm({ onClose }) {
+  const navigate = useNavigate();
+
+  const handleSubmitPayment = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = {
+      name: formData.get('name'),
+      plan: formData.get('plan'),
+      phone: formData.get('phone'),
+      cost: formData.get('cost'),
+      code: formData.get('code'),
+      paymentMethod: formData.get('payment-method')
+    };
+
+    alert('Payment Submitted');
+    navigate('/Comprobant', { state: data });
+    onClose();
+  };
+
+  return (
+    <form className="modal-form" onSubmit={handleSubmitPayment}>
+      <div>
+        <label htmlFor="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div>
+        <label htmlFor="plan">Plan:</label>
+        <select id="plan" name="plan" required>
+          <option value="">Selecciona un plan</option>
+          <option value="Mensualidad">Mensualidad</option>
+          <option value="Trimestre">Trimestre</option>
+          <option value="Semestre">Semestre</option>
+          <option value="Año">Año</option>
+        </select>
+      </div>
+      <div>
+        <label htmlFor="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div>
+        <label htmlFor="cost">Costo:</label>
+        <input type="number" id="cost" name="cost" required />
+      </div>
+      <div>
+        <label htmlFor="code">Código:</label>
+        <input type="text" id="code" name="code" required />
+      </div>
+      <div>
+        <label htmlFor="payment-method">Método de Pago:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="">Selecciona un método</option>
+          <option value="Tarjeta de Crédito">Tarjeta de Crédito</option>
+          <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+          <option value="PayPal">Crediculo</option>
+        </select>
+      </div>
+      <button type="submit">Realizar Pago</button>
+      <button type="button" className="cancel" onClick={onClose}>Cancelar Pago</button>
+    </form>
+  );
+}
+
 
 export default App;

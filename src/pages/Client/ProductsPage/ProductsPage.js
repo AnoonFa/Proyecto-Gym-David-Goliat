@@ -1,10 +1,8 @@
-// src/pages/Album.js
 import React, { useContext } from 'react';
 import Carousel from '../../../components/Carusel/Carusel';
 import SearchBar from '../../../components/SearchBar/SearchBar';
 import CategoryCircles from '../../../components/CategoryCircles/CategoryCircles';
 import ProductCard from '../../../components/ProductCard/ProductCard';
-import ProductForm from '../../../components/ProductForm/ProductForm';
 import { ProductsContext } from '../../../context/ProductsContext';
 import './ProdcutPage.css';
 import Header from '../../../components/Header/Header';
@@ -22,7 +20,6 @@ const ProductPage = () => {
       <Carousel />
       <CategoryCircles />
       <SearchBar />
-      <ProductForm />
       <div className="products-container">
         <h2>Productos</h2>
         <div className="products-grid">

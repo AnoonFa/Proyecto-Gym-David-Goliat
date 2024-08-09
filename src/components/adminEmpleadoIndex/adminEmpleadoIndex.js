@@ -10,12 +10,20 @@ import VerClases from "../VerClases/VerClases";
 import PlansAdmin from "../Plans/PlansAdmin";
 import PlanDetails from "../../pages/Planes/VerPlan";
 import RutinaAdminIndex from "../Rutina/RutinaAdminIndex";
+import Carousel from "../Carusel/Carusel";
+import SearchBar from "../SearchBar/SearchBar";
+import CategoryCircles from "../CategoryCircles/CategoryCircles";
 
 
 function AdminPage() {
   return (
     <>
       <Header />
+      <Carousel />
+      <PlansAdmin />
+      <SearchBar />
+      <CategoryCircles />
+      
       <Routes>
         <Route path="/" element={<h2>Bienvenido, Administrador</h2>} />
         <Route

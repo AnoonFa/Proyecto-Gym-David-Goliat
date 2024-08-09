@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './VerCliente.css';
 import Button from '../Button/Button';
 import ClienteForm from '../../Forms/ClienteForm/ClienteForm'; // Importamos el nuevo formulario
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 function VerCliente() {
   const [showForm, setShowForm] = useState(false);
@@ -11,6 +13,8 @@ function VerCliente() {
   };
 
   return (
+    <>
+    <Header />
     <div className="VerCliente">
       <h2>Buscar cliente</h2>
       <div className="ClienteForm">
@@ -54,6 +58,8 @@ function VerCliente() {
       </div>
       {showForm && <ClienteForm />} {/* Mostrar el formulario si showForm es verdadero */}
     </div>
+    <Footer />
+    </>
   );
 }
 
