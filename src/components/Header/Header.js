@@ -40,9 +40,9 @@ const Header = () => {
             <>
               <button onClick={() => handleNavigation('/ClasesPage/')} className="Profile">Clases</button>
               <button onClick={() => handleNavigation('/PlansPage')} className="Profile">Planes</button>
-              <button onClick={() => handleNavigation('/RoutinesPage')} className="Profile">Rutinas</button>
+              <button onClick={() => handleNavigation('/RutinaAdminIndex')} className="Profile">Rutinas</button>
               <button onClick={() => handleNavigation('/VerCliente')} className="Profile">Cliente</button>
-              <button onClick={() => handleNavigation('/ProductsPage/')} className="Profile">Productos</button>
+              <button onClick={() => handleNavigation('/VerProducto')} className="Profile">Productos</button>
               <button onClick={() => handleNavigation('/Ticketera')} className="Profile">Ticketera</button>
               <button onClick={() => handleNavigation('/Pagos')} className="Profile">Pagos</button>
             </>
